@@ -1,24 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RemoveBackgroundMLApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rf-JW-HWr">
+                                <rect key="frame" x="120" y="818" width="174" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="hFD-zG-iyx"/>
+                                    <constraint firstAttribute="height" constant="44" id="nuT-nP-nHz"/>
+                                </constraints>
+                                <state key="normal" title="Remove background">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qdj-s0-7Iq"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-qo-U2h">
+                                <rect key="frame" x="0.0" y="44" width="414" height="708"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZIT-df-pTG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="Tj3-td-JZA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5PU-D7-j3l">
+                                        <rect key="frame" x="0.0" y="358" width="414" height="350"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ocl-qo-U2h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7od-p0-Wam"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ocl-qo-U2h" secondAttribute="trailing" id="PRu-0f-NZK"/>
+                            <constraint firstItem="9rf-JW-HWr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cb4-PD-UE8"/>
+                            <constraint firstItem="Ocl-qo-U2h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i48-QP-iD2"/>
+                            <constraint firstItem="9rf-JW-HWr" firstAttribute="top" secondItem="Ocl-qo-U2h" secondAttribute="bottom" constant="66" id="uKk-70-BBf"/>
+                            <constraint firstItem="9rf-JW-HWr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vVq-so-FDa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputImage" destination="ZIT-df-pTG" id="kAr-6A-b2b"/>
+                        <outlet property="outputImage" destination="5PU-D7-j3l" id="hay-Cp-y1x"/>
+                        <outlet property="removeButton" destination="9rf-JW-HWr" id="OCE-PE-tER"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="104.46428571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
