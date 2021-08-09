@@ -44,6 +44,22 @@ class ViewController: UIViewController {
         
         
     }
+    @IBAction func loadTapp(_ sender: UIButton) {
+        let alertController = UIAlertController(title: nil,
+                                                message: nil,
+                                                preferredStyle: .actionSheet)
+        let camera = UIAlertAction(title: "Camera", style: .default) { _ in
+            self.chooseImagePicker(sourse: .camera)
+        }
+        let photo = UIAlertAction(title: "Photo", style: .default) { _ in
+            self.chooseImagePicker(sourse: .photoLibrary)
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancel)
+        alertController.addAction(camera)
+        alertController.addAction(photo)
+        present(alertController, animated: true, completion: nil)
+    }
     
     @objc func didImageTapped(){
         

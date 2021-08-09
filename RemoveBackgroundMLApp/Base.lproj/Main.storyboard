@@ -44,16 +44,34 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9X-it-tOz">
+                                <rect key="frame" x="120" y="766" width="174" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="J5h-IM-0LU"/>
+                                    <constraint firstAttribute="height" constant="44" id="O2N-95-sc5"/>
+                                </constraints>
+                                <state key="normal" title="Load img">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cc2-4o-hb2"/>
+                                    <action selector="loadTapp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XSy-DF-3TP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ocl-qo-U2h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7od-p0-Wam"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H9X-it-tOz" secondAttribute="trailing" constant="120" id="IZF-b4-ZZ4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ocl-qo-U2h" secondAttribute="trailing" id="PRu-0f-NZK"/>
+                            <constraint firstItem="9rf-JW-HWr" firstAttribute="top" secondItem="H9X-it-tOz" secondAttribute="bottom" constant="8" symbolic="YES" id="TKF-Q5-hCf"/>
                             <constraint firstItem="9rf-JW-HWr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cb4-PD-UE8"/>
                             <constraint firstItem="Ocl-qo-U2h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i48-QP-iD2"/>
                             <constraint firstItem="9rf-JW-HWr" firstAttribute="top" secondItem="Ocl-qo-U2h" secondAttribute="bottom" constant="66" id="uKk-70-BBf"/>
                             <constraint firstItem="9rf-JW-HWr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vVq-so-FDa"/>
+                            <constraint firstItem="H9X-it-tOz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="y26-5c-yuu"/>
                         </constraints>
                     </view>
                     <connections>
